@@ -43,80 +43,90 @@ public class cal extends Frame implements ActionListener {
         add(textField, gbc);
 
         // Add the buttons
+        // first line
         gbc.gridwidth = 1;
         gbc.gridy = 1;
         add(b1, gbc);
 
+        gbc.gridy = 1;
         gbc.gridx = 1;
         add(b2, gbc);
 
+        gbc.gridy = 1;
         gbc.gridx = 2;
         add(b3, gbc);
 
+        gbc.gridy = 1;
         gbc.gridx = 3;
         add(badd, gbc);
 
+        // second line
         gbc.gridx = 0;
         gbc.gridy = 2;
         add(b4, gbc);
 
+        gbc.gridx = 0;
         gbc.gridx = 1;
         add(b5, gbc);
 
+        gbc.gridx = 0;
         gbc.gridx = 2;
         add(b6, gbc);
 
+        gbc.gridx = 0;
         gbc.gridx = 3;
         add(bsub, gbc);
 
+        // third line
         gbc.gridx = 0;
         gbc.gridy = 3;
         add(b7, gbc);
 
+        gbc.gridy = 3;
         gbc.gridx = 1;
         add(b8, gbc);
 
+        gbc.gridy = 3;
         gbc.gridx = 2;
         add(b9, gbc);
 
+        gbc.gridy = 3;
         gbc.gridx = 3;
         add(bdiv, gbc);
 
+        // fourth line
         gbc.gridx = 0;
         gbc.gridy = 4;
         add(b0, gbc);
 
+        gbc.gridy = 4;
         gbc.gridx = 1;
         add(bdot, gbc);
 
+        gbc.gridy = 4;
         gbc.gridx = 2;
         add(bmul, gbc);
 
+        gbc.gridy = 4;
         gbc.gridx = 3;
         add(bequal, gbc);
 
-
-
-
-	badd.setPreferredSize(new Dimension(65, 40));
-	bsub.setPreferredSize(new Dimension(65, 40));
-	bmul.setPreferredSize(new Dimension(65, 40));
-	bdiv.setPreferredSize(new Dimension(65, 40));
-	bequal.setPreferredSize(new Dimension(65, 40));
-	bdot.setPreferredSize(new Dimension(65, 40));
-	b1.setPreferredSize(new Dimension(65, 40));
-	b2.setPreferredSize(new Dimension(65, 40));
-	b3.setPreferredSize(new Dimension(65, 40));
-	b4.setPreferredSize(new Dimension(65, 40));
-	b5.setPreferredSize(new Dimension(65, 40));
-	b6.setPreferredSize(new Dimension(65, 40));
-	b7.setPreferredSize(new Dimension(65, 40));
-	b8.setPreferredSize(new Dimension(65, 40));
-	b9.setPreferredSize(new Dimension(65, 40));
-	b0.setPreferredSize(new Dimension(65, 40));
-
-
-
+        badd.setPreferredSize(new Dimension(65, 40));
+        bsub.setPreferredSize(new Dimension(65, 40));
+        bmul.setPreferredSize(new Dimension(65, 40));
+        bdiv.setPreferredSize(new Dimension(65, 40));
+        bequal.setPreferredSize(new Dimension(65, 40));
+        bdot.setPreferredSize(new Dimension(65, 40));
+        b1.setPreferredSize(new Dimension(65, 40));
+        b2.setPreferredSize(new Dimension(65, 40));
+        b3.setPreferredSize(new Dimension(65, 40));
+        b4.setPreferredSize(new Dimension(65, 40));
+        b5.setPreferredSize(new Dimension(65, 40));
+        b6.setPreferredSize(new Dimension(65, 40));
+        b7.setPreferredSize(new Dimension(65, 40));
+        b8.setPreferredSize(new Dimension(65, 40));
+        b9.setPreferredSize(new Dimension(65, 40));
+        b0.setPreferredSize(new Dimension(65, 40));
 
         // Add the action listeners to the buttons
         b0.addActionListener(this);
@@ -141,65 +151,65 @@ public class cal extends Frame implements ActionListener {
         setSize(500, 500);
         setResizable(false);
         setVisible(true);
-	}
+    }
 
-	public void actionPerformed(ActionEvent e) {
-   		if (e.getSource() == b0) {
-        		textField.setText(textField.getText() + "0");
-    		} else if (e.getSource() == b1) {
-        		textField.setText(textField.getText() + "1");
-    		} else if (e.getSource() == b2) {
-        		textField.setText(textField.getText() + "2");
-    		} else if (e.getSource() == b3) {
-        		textField.setText(textField.getText() + "3");
-    		} else if (e.getSource() == b4) {
-        		textField.setText(textField.getText() + "4");
-    		} else if (e.getSource() == b5) {
-        		textField.setText(textField.getText() + "5");
-    		} else if (e.getSource() == b6) {
-        		textField.setText(textField.getText() + "6");
-    		} else if (e.getSource() == b7) {
-        		textField.setText(textField.getText() + "7");
-    		} else if (e.getSource() == b8) {
-        		textField.setText(textField.getText() + "8");
-    		} else if (e.getSource() == b9) {
-        		textField.setText(textField.getText() + "9");
-    		} else if (e.getSource() == bdot) {
-        		textField.setText(textField.getText() + ".");
-    		} else if (e.getSource() == bclear) {
-        		textField.setText("");
-    		} else if (e.getSource() == badd) {
-        		num1 = Double.parseDouble(textField.getText());
-        		operator = "+";
-        		textField.setText("");
-    		} else if (e.getSource() == bsub) {
-        		num1 = Double.parseDouble(textField.getText());
-        		operator = "-";
-        		textField.setText("");
-    		} else if (e.getSource() == bmul) {
-        		num1 = Double.parseDouble(textField.getText());
-        		operator = "*";
-        		textField.setText("");
-    		} else if (e.getSource() == bdiv) {
-        		num1 = Double.parseDouble(textField.getText());
-        		operator = "/";
-        		textField.setText("");
-   		} else if (e.getSource() == bequal) {
-        		num2 = Double.parseDouble(textField.getText());
-        		if (operator.equals("+")) {
-            		res = num1 + num2;
-        		} else if (operator.equals("-")) {
-            		res = num1 - num2;
-        		} else if (operator.equals("*")) {
-            		res = num1 * num2;
-        		} else if (operator.equals("/")) {
-            		res = num1 / num2;
-        		}
-        		textField.setText(String.valueOf(res));
-    		}
-	}
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == b0) {
+            textField.setText(textField.getText() + "0");
+        } else if (e.getSource() == b1) {
+            textField.setText(textField.getText() + "1");
+        } else if (e.getSource() == b2) {
+            textField.setText(textField.getText() + "2");
+        } else if (e.getSource() == b3) {
+            textField.setText(textField.getText() + "3");
+        } else if (e.getSource() == b4) {
+            textField.setText(textField.getText() + "4");
+        } else if (e.getSource() == b5) {
+            textField.setText(textField.getText() + "5");
+        } else if (e.getSource() == b6) {
+            textField.setText(textField.getText() + "6");
+        } else if (e.getSource() == b7) {
+            textField.setText(textField.getText() + "7");
+        } else if (e.getSource() == b8) {
+            textField.setText(textField.getText() + "8");
+        } else if (e.getSource() == b9) {
+            textField.setText(textField.getText() + "9");
+        } else if (e.getSource() == bdot) {
+            textField.setText(textField.getText() + ".");
+        } else if (e.getSource() == bclear) {
+            textField.setText("");
+        } else if (e.getSource() == badd) {
+            num1 = Double.parseDouble(textField.getText());
+            operator = "+";
+            textField.setText("");
+        } else if (e.getSource() == bsub) {
+            num1 = Double.parseDouble(textField.getText());
+            operator = "-";
+            textField.setText("");
+        } else if (e.getSource() == bmul) {
+            num1 = Double.parseDouble(textField.getText());
+            operator = "*";
+            textField.setText("");
+        } else if (e.getSource() == bdiv) {
+            num1 = Double.parseDouble(textField.getText());
+            operator = "/";
+            textField.setText("");
+        } else if (e.getSource() == bequal) {
+            num2 = Double.parseDouble(textField.getText());
+            if (operator.equals("+")) {
+                res = num1 + num2;
+            } else if (operator.equals("-")) {
+                res = num1 - num2;
+            } else if (operator.equals("*")) {
+                res = num1 * num2;
+            } else if (operator.equals("/")) {
+                res = num1 / num2;
+            }
+            textField.setText(String.valueOf(res));
+        }
+    }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         cal obj = new cal();
         obj.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
